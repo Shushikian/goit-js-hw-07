@@ -28,6 +28,6 @@ function showOrigin(event) {
   event.preventDefault();
 
   const modalWindow = basicLightbox.create(
-    `<img src="${event.target.dataset.source}">`);
+    `<img src="${event.target.dataset.source}" width="800" height="600">`);
   modalWindow.show();
 };
