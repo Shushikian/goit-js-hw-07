@@ -5,9 +5,10 @@ import { galleryItems } from './gallery-items.js';
 const imageList = document.querySelector('.gallery')
 
 const imageListItem = galleryItems.map(({ preview, original, description }) =>
-`<a class="gallery__item" href="${original}">
+  `<div class="gallery__item">
+<a class="gallery__item" href="${original}">
   <img class="gallery__image" src="${preview}" alt="${description}" />
-</a>`
+</a></div>`
 ).join('');
 
 imageList.insertAdjacentHTML('beforeend', imageListItem);

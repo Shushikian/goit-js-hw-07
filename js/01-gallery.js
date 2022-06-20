@@ -26,7 +26,10 @@ imageList.addEventListener('click', showOrigin);
 function showOrigin(event) {
   
   event.preventDefault();
-
+  console.log(event.target.nodeName)
+  if (event.target.nodeName !== `IMG`) {
+    return;
+  }
   const modalWindow = basicLightbox.create(
     `<img src="${event.target.dataset.source}" width="800" height="600">`);
   modalWindow.show();
